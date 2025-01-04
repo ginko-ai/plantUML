@@ -1,0 +1,137 @@
+@startyaml
+dr:
+	time: date:time
+
+	process:
+		mental:
+		backtesting:
+			tags:
+				Time:
+					Conf:True
+					Price:
+						Location:
+							-ret_below-05
+							-new_high_after_1115
+						EntryMethod:
+							-monkey
+							-goldfish
+							-pre-goldfish
+							-falseDay
+							-retirement
+
+				Price:
+					Model:
+						Type:
+							-trend
+							-range
+						State:
+							-intact
+							-broken
+					WDR:
+						Location:
+							-above
+							-below
+						Direction:
+							-into
+							-away_from
+					TTT:
+						conf:candle
+						against:
+							-max_ext
+							-m7_ret
+							-idr_hl
+							-rbc
+					DB_Level:
+						Location:
+							sd_mid:above
+							sd_1:above
+							sd_2p5:above
+							sd_5:below
+							sd_8:
+								-above
+								-below
+						Direction:into
+					M7_Box:
+						Location:
+							-inside
+							-outside
+						Sentiment:
+							-long
+							-short
+				Volume:
+					Imbalances:
+						SVP:
+							-lvn
+							-pvn
+							-poc
+						Limiters:
+							Location:
+								Entry:
+									-bwt_stop
+									-bwt_target
+							gap:gib
+							volume:
+								-standard
+								-specials
+								-magnetic
+							directional:dib
+
+
+
+
+
+
+
+
+
+		forwardtesting:
+			-papertrading
+			-micros
+		scaling:
+		automation:
+
+
+		chartDB:
+			-bml_levels
+			-broken_model
+			-byConfTime
+			-cpi
+			-daily_boxes
+			-daily_downside
+			-daily_gaps
+			-daily_squeezes
+			-daily_upside
+			-dots
+			-false_days
+			-fomc
+			-htf_gibs
+			-htf_vibs
+			-hva
+			-limiter_boxes
+			-limiters
+			-lva
+			-m7_candles
+			-m7_price_model
+			-m7x
+			-magic_vibs
+			-magnetic_ibs
+			-magnetic_PoCs
+			-monthly_boxes
+			-monthly_drcs
+			-nfp
+			-ollla_bml
+			-one_minute
+			-one_minute_ibs
+			-rbc_trades
+			-rth_gaps
+			-specials
+			-spx_gaps
+			-standards
+			-symmetry
+			-triple_false_days
+			-trumpets
+			-turnaround_thu
+			-weekly_boxes
+			-weekly_gaps
+			
+@endyaml

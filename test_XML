@@ -1,0 +1,20 @@
+@startXML
+<?xml version="1.0" encoding="UTF-8"?>
+<World>
+    <America>
+        <Canada/>
+        <USA>
+            <NewYork/>
+            <Boston/>
+        </USA>
+        <Mexico/>
+    </America>
+    <Europe>
+        <Italy/>
+        <Germany>
+            <Berlin/>
+        </Germany>
+    </Europe>
+    <Africa/>
+</World>
+@endXML

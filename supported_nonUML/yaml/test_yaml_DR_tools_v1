@@ -1,0 +1,156 @@
+@startyaml
+dr:
+	time: date:time
+	inter_day:
+		drc:
+			time:
+				-ydr
+				-mdr
+				-wdr
+				-ddr
+			volume:
+				imbalances:
+					-gib
+					-vib
+                    -dib
+			price:
+				upper_wick:
+					-dr
+					-idr
+				body:
+					sentiment:
+						-long
+						-short
+				lower_ick:
+					-idr
+					-dr
+
+	intra_day:
+		inter_session:
+			model:
+				- uxp
+				- ux
+				- u
+				- rc
+				- rx
+				- d
+				- dx
+				- dxp
+			sequence:
+				profile:
+					trend:
+						-u,ux,uxp
+						-d,dx,dxp
+					range:
+						-rc
+						-rx:trumpet
+					vola:
+						incr:
+							-u,ux,uxp
+							-rx
+							-d,dx,dxp
+						decr:
+							-uxp,ux,u
+							-rc
+							-dxp,dx,d
+
+		session:
+			-adr
+			-odr
+			-rdr
+		intra_session:
+			_formation:
+				-m7box
+			_lines: incr
+			_transition: decr
+		event:
+			#pre-auction:
+				#-imbalance
+			openingBar:
+				-m7candle
+			pre_conf:
+				-rbc
+			conf:
+				state:
+					- true
+					- false
+				direction:
+					- long
+					- short
+				stats_ret:
+					ret_max:
+						time:
+							date: time
+						price:
+							sd: count
+							sc: distribution
+							sd: cluster
+							sd: median
+
+					ret_b4hoslos:
+						-sd
+
+					ret_after05:
+						-sd
+				stats_ext:
+					ext_max:
+						-sd
+					ext_hoslos:
+						-sd
+					ext_after05:
+						-sd
+			#closingBar:
+				#-clearing
+				#-settlement
+				#-calc_vwap
+				#-calc_twap
+
+		ooe:
+		pi: 3.14159
+		bar_nbr:
+			prev2: n-2
+			prev1: n-1
+			current: n
+	tools:
+		pinescript:
+			DR_IDR:v1.5
+			DRIVE:v2.1
+			DRIB:v1.0
+			M7_Models:v1.03
+			M7_Weekly_DRs:v3
+			M7_IB_MTF:
+			M7_Weekly_Box:
+			M7_Monthly_Box:
+			M7X:
+			M7_DDR:
+            volume_SVP:
+
+		academy:
+			drlens:
+			quantX:
+	process:
+		mental:
+		backtesting:
+			tags:
+
+		forwardtesting:
+			-papertrading
+			-micros
+		scaling:
+		automation:
+	xmas: true
+	french-hens: 3
+	calling-birds:
+		- huey
+		- dewey
+		- louie
+		- fred
+	xmas-fifth-day:
+	calling-birds: four
+	french-hens: 3
+	golden-rings: 5
+	partridges:
+		count: 1
+		location: "a pear tree"
+	turtle-doves: two
+@endyaml

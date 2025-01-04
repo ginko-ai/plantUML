@@ -1,0 +1,30 @@
+@startuml
+Class01 <|-- Class02 : Inheritance\n(2 from 1)
+Class03 *-- Class04 : Composition\n(4 part of 3)
+Class05 o-- Class06 : Aggregation\n(6 contained in 5)
+Class07 .. Class08 : Simple\ndependency\n(7 depends on 8)
+Class09 -- Class10 : Basic\nassociation\n(9 is related 10)
+@enduml
+@startuml
+Class11 <|.. Class12 : Realization\n(12 implements 11)
+Class13 --> Class14 : Directed\nassociation\n(13 uses 14)
+Class15 ..> Class16 : Dependency\nw Direction\n(15 depends on 16)
+Class17 ..|> Class18 : Interface\nrealization
+Class19 <--* Class20 : Composition\nw reverse direction
+@enduml
+@startuml
+Class21 #-- Class22 : Alt notation \nfor containment
+Class23 x-- Class24 : Cross reference \nor exclusion
+Class25 }-- Class26 : Alt\ngrouping
+Class27 +-- Class28 : Public\nvisibility
+Class29 ^-- Class30 : Alt\ninheritance
+@enduml
+@startuml
+
+Class01 "1" *-- "many" Class02 : contains
+
+Class03 o-- Class04 : aggregation
+
+Class05 --> "1" Class06
+
+@enduml

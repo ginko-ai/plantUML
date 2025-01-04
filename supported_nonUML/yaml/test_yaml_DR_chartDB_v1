@@ -1,0 +1,55 @@
+@startyaml
+dr:
+	time: date:time
+
+	process:
+		mental:
+		backtesting:
+		forwardtesting:
+		scaling:
+		automation:
+		chartDB:
+			by_alpha:
+				-bml_levels
+				-broken_model
+				-byConfTime
+				-cpi
+				-daily_boxes
+				-daily_downside
+				-daily_gaps
+				-daily_squeezes
+				-daily_upside
+				-dots
+				-false_days
+				-fomc
+				-htf_gibs
+				-htf_vibs
+				-hva
+				-limiter_boxes
+				-limiters
+				-lva
+				-m7_candles
+				-m7_price_model
+				-m7x
+				-magic_vibs
+				-magnetic_ibs
+				-magnetic_PoCs
+				-monthly_boxes
+				-monthly_drcs
+				-nfp
+				-ollla_bml
+				-one_minute
+				-one_minute_ibs
+				-rbc_trades
+				-rth_gaps
+				-specials
+				-spx_gaps
+				-standards
+				-symmetry
+				-triple_false_days
+				-trumpets
+				-turnaround_thu
+				-weekly_boxes
+				-weekly_gaps
+
+@endyaml

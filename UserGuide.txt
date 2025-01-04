@@ -1,0 +1,31 @@
+https://plantuml.com/
+
+UML
+    Sequence diagram
+    https://plantuml.com/sequence-diagram
+
+    Usecase diagram
+    https://plantuml.com/usecase-diagram
+
+    Class diagram
+    https://plantuml.com/class-diagram
+
+    Object diagram
+    https://plantuml.com/object-diagram
+
+    Activity diagram (Find the legacy syntax here)
+    x https://plantuml.com/activity-diagram
+    https://plantuml.com/activity-diagram-beta#sdl
+
+    Component diagram
+    https://plantuml.com/component-diagram
+
+    Deployment diagram
+    https://plantuml.com/deployment-diagram
+
+    State diagram
+    https://plantuml.com/state-diagram
+
+    Timing diagram
+    https://plantuml.com/timing-diagram
+
