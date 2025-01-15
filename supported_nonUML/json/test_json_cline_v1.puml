@@ -1,0 +1,55 @@
+@startjson
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Refactor Rename Parameters",
+  "type": "object",
+  "properties": {
+    "textDocument": {
+      "$ref": "#/components/schemas/TextDocumentIdentifier" // Referencing an LSP data type
+    },
+    "position": {
+      "$ref": "#/components/schemas/Position" // Referencing an LSP data type
+    },
+    "newName": {
+      "type": "string",
+      "description": "The new name for the symbol"
+    }
+  },
+  "required": [
+    "textDocument",
+    "position",
+    "newName"
+  ],
+  "components": {
+    "schemas": {
+      "TextDocumentIdentifier": {
+        "type": "object",
+        "properties": {
+          "uri": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "uri"
+        ]
+      },
+      "Position": {
+        "type": "object",
+        "properties": {
+          "line": {
+            "type": "integer"
+          },
+          "character": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "line",
+          "character"
+        ]
+      }
+    }
+  }
+}
+@endjson
